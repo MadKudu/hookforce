@@ -1,0 +1,19 @@
+{
+  "name": "hookforce",
+  "description": "Qualify leads in real-time and upsert quality leads in Saleforce",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "indicative": "^2.2.1",
+    "jsforce": "^1.7.1",
+    "jsonpath-object-transform": "git+https://github.com/dvdln/jsonpath-object-transform.git",
+    "q": "^1.5.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "dotenv": "^4.0.0",
+    "mocha": "^3.2.0"
+  }
+}
