@@ -1,8 +1,8 @@
 # What it's for
 
-Hookforce is a small open-source service that creates leads in Salesforce when a webhook is called and the data passed are matching some conditions you define.
+Hookforce is an open-source service that creates leads in Salesforce when a webhook is called and the data passed are matching some conditions you define.
 
-It is useful when you want to create new leads in Salesforce only a lead is found interesting for sales.
+It is useful when you want to create new leads in Salesforce only if a lead is found interesting for sales.
 
 Alternatives: if you have a small number of leads, checkout [Zapier](https://zapier.com/). It is powerful and easy to use.
 
@@ -56,7 +56,7 @@ The json posted to this webhook:
     email: 'bob@bigco.com',
     name: 'Bob Dilon',
     mk_customer_fit: 'good'
-  }  
+  }
 }
 ```
 will be transformed into this key-value object before creating the lead in Salesforce:

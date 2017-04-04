@@ -1,28 +1,21 @@
-var chai = require('chai')
-var expect = chai.expect
-var chai_as_promised = require("chai-as-promised")
-chai.use(chai_as_promised)
+'use strict'
 
-const credentials = {
-  username: 'sam@392bloom.com',
-  password: 'zzz',
-  security_token: 'zzz'
-}
+const chai = require('chai')
+const expect = chai.expect
 
-describe('salesforce_client', function() {
+require('../lib/get_environment')()
+const salesforce = require('../lib/salesforce')
+
+describe('salesforce_client', function () {
   this.timeout(10000)
 
-  it('returns a salesforce client and we can run a query', () => {
-    const get_salesforce_client = require('../lib/salesforce')
-    return expect(get_salesforce_client(credentials)
-      .then(salesforce_client => {
-        return salesforce_client.query('SELECT Id, email FROM Lead LIMIT 1')
-          // .then(console.log)
-          // .catch(console.log)
+  // instantiate the salesforce singleton
+  before(salesforce.init)
+
+  it('should instantiate a salesforce singleton', () => {
+    return salesforce.client.query('SELECT Id, email FROM Lead LIMIT 1')
+      .then(results => {
+        expect(results).to.have.a.property('totalSize', 1)
       })
-      .catch(err => {
-        console.log(err)
-      })
-    ).to.eventually.have.property('done')
-  });
-});
+  })
+})

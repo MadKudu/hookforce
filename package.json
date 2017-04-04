@@ -1,19 +1,48 @@
 {
   "name": "hookforce",
   "description": "Qualify leads in real-time and upsert quality leads in Saleforce",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "keywords": [
+    "madkudu",
+    "madkudu.js"
+  ],
+  "repository": {
+    "url": "https://github.com/MadKudu/madkudu.js.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/MadKudu/hookforce/issues"
+  },
+  "main": "index.js",
+  "homepage": "https://github.com/MadKudu/hookforce#readme",
+  "engines": {
+    "node": "6.10.0",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "start": "node ./node_modules/.bin/pm2 start process.config.js",
+    "poststart": "node ./node_modules/.bin/pm2 logs",
+    "dev": "node ./node_modules/.bin/pm2-dev start app.js",
+    "postinstall": "",
+    "test": "npm run-script lint && npm run-script mocha",
+    "mocha": "./node_modules/mocha/bin/mocha --recursive test/",
+    "lint": "./node_modules/eslint/bin/eslint.js . --fix"
+  },
   "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "indicative": "^2.2.1",
-    "jsforce": "^1.7.1",
-    "jsonpath-object-transform": "git+https://github.com/dvdln/jsonpath-object-transform.git",
-    "q": "^1.5.0"
+    "body-parser": "1.17.1",
+    "express": "4.15.2",
+    "indicative": "2.2.1",
+    "jsforce": "1.7.1",
+    "jsonpath-object-transform": "1.0.4",
+    "q": "1.5.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
-    "dotenv": "^4.0.0",
-    "mocha": "^3.2.0"
+    "chai": "3.5.0",
+    "dotenv": "4.0.0",
+    "mocha": "3.2.0",
+    "eslint": "3.19.0",
+    "eslint-config-standard": "7.1.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "2.1.1"
   }
 }
