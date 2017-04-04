@@ -79,6 +79,7 @@ This step checks if a lead with a same email address already exists in Salesforc
 # How to set this up
 
 1. Deploy this service to a platform like [Heroku](https://www.heroku.com/)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 2. Configure the following environment variables with something like
