@@ -1,1 +1,3 @@
 test/env_variables.env
+
+node_modules/**
