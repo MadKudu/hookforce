@@ -1,7 +1,5 @@
-var chai = require('chai')
-var expect = chai.expect
-var chai_as_promised = require("chai-as-promised")
-chai.use(chai_as_promised)
+// const chai = require('chai')
+// const expect = chai.expect
 
 const rules = {
   'type': 'equals:identify',
@@ -9,14 +7,11 @@ const rules = {
 }
 
 const filter = require('../lib/filter')
-
 const data = require('./data_sample.json')
 
-describe('filter', function() {
-  it('filter without error', () => {
+describe('filter', function () {
+  it('should filter without error', () => {
     process.env.FILTER = JSON.stringify(rules)
-
-    expect(filter(data).then(console.log).catch(console.log)).to.eventually.be.fulfilled
-
-  });
-});
+    return filter(data)
+  })
+})
