@@ -33,7 +33,7 @@
     "express": "4.15.2",
     "indicative": "2.2.1",
     "jsforce": "1.7.1",
-    "jsonpath-object-transform": "1.0.4",
+    "jsonpath-object-transform": "git+https://github.com/dvdln/jsonpath-object-transform.git",
     "q": "1.5.0"
   },
   "devDependencies": {
