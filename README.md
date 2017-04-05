@@ -82,16 +82,27 @@ This step checks if a lead with a same email address already exists in Salesforc
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-2. Configure the following environment variables with something like
+2. After deploying, go into Settings (https://cl.ly/0H231r052J0V) and click on "Reveal Config Vars" (https://cl.ly/2I0b3H2F1R2E). Configure the following environment variables with the following:
 
 ```
-FILTER={"type": "equals:identify", "traits.mk_customer_fit":"required|in:good,very good"}
-TRANSFORM={"email":"$.traits.email","leadsource":"trial signup", "LastName":"N/A", "Company":"N/A"}
+FILTER={"type": "equals:identify", "traits.mk_customer_fit_segment":"required|in:good,very good"}
+TRANSFORM={"email":"$.traits.email","leadsource":"trial signup", "LastName":"N/A", "FirstName":"$.traits.mk_first_name", "Company":"mk_company_name", "mk_job_role__c":"$.traits.mk_job_role", "mk_seniority__c":"$.traits.mk_seniority__c"}
 
 SALESFORCE_USERNAME=zzz
 SALESFORCE_PASSWORD=zzz
 SALESFORCE_TOKEN=zzz
 ```
+You can find your token under "Reset My Security Token" in your Personal Settings in Salesforce.
+
+To check if you've you're set up, go to "View logs" under "More" (https://cl.ly/272b1Y061419).
+
+3. Under Heroku Settings, find your domain. Usually it's https://{APP_NAME}.herokuapp.com/
+
+4. Now go into Segment and active the Webhook integration (https://cl.ly/0c3F0n1U1643). It might already be live depending on your environment.
+
+5. Add a webhook and paste in the Heroku domain (https://cl.ly/0Y2D2M2o0N41)
+
+6. Save and activate the integration, if necessary
 
 You're all set.
 
