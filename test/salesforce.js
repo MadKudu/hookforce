@@ -3,7 +3,8 @@
 const chai = require('chai')
 const expect = chai.expect
 
-require('../lib/get_environment')()
+// load env variables from .env
+require('dotenv').config()
 const salesforce = require('../lib/salesforce')
 
 describe('salesforce_client', function () {
