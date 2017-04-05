@@ -1,0 +1,7 @@
+{
+  "name": "Hookforce",
+  "description": "A webhook service that creates leads in Salesforce when they match conditions you've defined",
+  "repository": "https://github.com/MadKudu/hookforce",
+  "logo": "http://www.madkudu.com/static/images/general/main-logo-madkudu.svg",
+  "keywords": ["madkudu", "salesforce", "webhook"]
+}
