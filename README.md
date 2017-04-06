@@ -86,7 +86,7 @@ This step checks if a lead with a same email address already exists in Salesforc
 
 ```
 FILTER={"type": "equals:identify", "traits.mk_customer_fit_segment":"required|in:good,very good"}
-TRANSFORM={"email":"$.traits.email","leadsource":"trial signup", "FirstName":"$.traits.mk_first_name", "LastName":"$.traits.mk_last_name", "Company":"mk_company_name", "mk_job_role__c":"$.traits.mk_job_role", "mk_seniority__c":"$.traits.mk_seniority"}
+TRANSFORM={"email":"$.traits.email","mk_customer_fit_segment__c": "$.traits.mk_customer_fit_segment", "leadsource":"Signup", "FirstName":"$.traits.mk_first_name", "LastName":"$.traits.mk_last_name", "Company":"$.traits.mk_company_name", "mk_job_role__c":"$.traits.mk_job_role", "mk_seniority__c":"$.traits.mk_seniority"}
 
 SALESFORCE_USERNAME=zzz
 SALESFORCE_PASSWORD=zzz
