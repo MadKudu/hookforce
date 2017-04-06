@@ -120,7 +120,7 @@ Below the steps to set up this flow assuming you've set up a hookforce service i
 3. You can test the flow by creating a fake identify event running a code like this in the web console on your your site. The lead will be created in Salesforce.
 ```
 analytics.reset()
-analytics.identify({email: 'sam@madkudu.com', mk_customer_fit: 'good'})
+analytics.identify({email: 'sam@madkudu.com', mk_customer_fit_segment: 'good'})
 ```
 
 That's it!
