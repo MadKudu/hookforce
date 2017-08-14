@@ -6,7 +6,6 @@ const salesforce = require('../lib/salesforce')
 
 const check_validity_of_environment_variables = require('../lib/check_validity_of_environment_variables')
 
-
 describe('check_validity_of_environment_variables', function () {
   this.timeout(10000)
 
