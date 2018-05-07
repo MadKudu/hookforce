@@ -1,9 +1,7 @@
 const indicative = require('indicative')
 
 const isFalse = function (data, field, message, args, get) {
-
   return new Promise(function (resolve, reject) {
-
     // get value of field under validation
     const fieldValue = get(data, field)
 
