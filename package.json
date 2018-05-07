@@ -34,6 +34,7 @@
     "indicative": "2.2.1",
     "jsforce": "1.7.1",
     "jsonpath-object-transform": "git+https://github.com/dvdln/jsonpath-object-transform.git",
+    "lodash": "^4.17.10",
     "q": "1.5.0"
   },
   "devDependencies": {
