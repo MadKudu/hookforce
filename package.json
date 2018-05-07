@@ -1,7 +1,7 @@
 {
   "name": "hookforce",
   "description": "Qualify leads in real-time and upsert quality leads in Saleforce",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "keywords": [
     "madkudu",
     "madkudu.js"
