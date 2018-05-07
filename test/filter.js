@@ -7,11 +7,11 @@ const rules = {
 }
 
 const filter = require('../lib/filter')
-const data = require('./data_sample.json')
+const data_sample = require('./fixtures/data_sample.json')
 
 describe('filter', function () {
   it('should filter without error', () => {
     process.env.FILTER = JSON.stringify(rules)
-    return filter(data)
+    return filter(data_sample)
   })
 })
